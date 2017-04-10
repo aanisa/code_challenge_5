@@ -4,10 +4,7 @@ var myApp = angular.module('myApp', []);
 myApp.controller('MessageController', ['$scope', 'DataService', function($scope, DataService) {
   DataService.getData();
   $scope.postData = DataService.postData;
-  $scope.newMessage = {
-    name: '',
-    message: ''
-  };
+  $scope.newMessage = DataService.newMessage;
   console.log($scope.newMessage);
 }]);
 
@@ -17,6 +14,10 @@ myApp.factory('DataService', ['$http', function($http){
       messages : []
     };
 
+    var newMessage = {
+      name: '',
+      message: ''
+    };
 
     function getData(){
       $http.get('/messages').then(function(response){
@@ -31,9 +32,9 @@ myApp.factory('DataService', ['$http', function($http){
         console.log('saving to db:', response);
       });
     }
-
     return {
       messageObject : messageObject,
+      newMessage: newMessage,
       getData  : getData,
       postData : postData
     };
