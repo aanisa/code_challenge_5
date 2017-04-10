@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Challenge 5</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/client.min.js"></script>
+
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Message App</h1>
+      </div>
+    </div>
+
+    <div ng-controller="MessageController">
+      <div class="messageBox" style="height:200px; background-color:lightgrey;"></div>
+      <div class="inputBox">
+        <input ng-model="newMessage.name" type="text" placeholder="name">
+        <input ng-model="newMessage.message" type="text" placeholder="message">
+        <button ng-click"postData(newMessage)" type="button" >Submit</button>
+      </div>
+
+    </div>
+
+  </body>
+</html>
