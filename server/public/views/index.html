@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Code Challenge 5</title>
 
@@ -10,24 +11,25 @@
     <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
     <script type="text/javascript" src="scripts/client.min.js"></script>
 
-  </head>
-  <body>
+</head>
 
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Message App</h1>
-      </div>
-    </div>
+<body>
+    <h1>Message App</h1>
 
     <div ng-controller="MessageController">
-      <div class="messageBox" style="height:200px; background-color:lightgrey;"></div>
-      <div class="inputBox">
+        <div class="messageBox" style="height:200px; background-color:lightgrey;">
+            <div ng-repeat="message in messageObject.messages">
+              <p> {{message.name}} : {{message.message}} </p>
+            </div>
+        </div>
+
         <input ng-model="newMessage.name" type="text" placeholder="name">
         <input ng-model="newMessage.message" type="text" placeholder="message">
-        <button ng-click"postData(newMessage)" type="button" >Submit</button>
-      </div>
+        <button ng-click "postData(newMessage)" type="button">Submit</button>
+
 
     </div>
 
-  </body>
+</body>
+
 </html>

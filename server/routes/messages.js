@@ -13,7 +13,7 @@ router.get('/', function(req,res){
       console.log(err);
       res.send(500);
     }
-
+    console.log('Get from DB');
     res.send(messages);
   });
 });
@@ -23,13 +23,13 @@ router.post('/', function(req,res){
     name: req.body.name,
     message: req.body.message
   });
-  console.log(message);
+  console.log(req.body);
   message.save(function(err, savedMessage){
     if(err){
       console.log(err);
       res.send(500);
     }
-
+    console.log('Saved to DB');
     res.send(savedMessage);
   });
 });

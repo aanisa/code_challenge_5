@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var db = require('./modules/db.js');
 
 //ROUTE MODULES
-var index = require('./routes/index.js');
 var messages = require('./routes/messages.js');
+var index = require('./routes/index.js');
 
 //APP CONFIG
 app.set('port', (process.env.PORT || 5000));
