@@ -17,3 +17,4 @@ The message board application you are going to build has the following requireme
 * Once the message has been successfully written to the database, display all messages on the DOM,
 
 * If the application page is reloaded, all previous messages should appear.
+
