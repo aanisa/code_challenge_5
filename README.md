@@ -1,8 +1,7 @@
-# Instructions
-Welcome to your last Code Challenge! In this challenge, you are going to build a MEAN stack application. The application you are going to build is a simple message board. You may use the base project supplied by your instructors as a platform to start from.
+# Prime Digital Academy - Code Challenge
 
-Just relax and show us what you know!
-Thanks and good luck!
+## Goal 
+In this challenge, you are going to build a MEAN stack application. The application you are going to build is a simple message board. You may use the base project supplied by your instructors as a platform to start from.
 
 ## Message Board Application
 The message board application you are going to build has the following requirements:
@@ -18,8 +17,3 @@ The message board application you are going to build has the following requireme
 * Once the message has been successfully written to the database, display all messages on the DOM,
 
 * If the application page is reloaded, all previous messages should appear.
-
-### No HARD or PRO mode on this. Please do not host on Heroku or mLabs. 
-
-Once you have completed the application, please submit via GitHub link, then quietly exit the room. 
-Thanks!
